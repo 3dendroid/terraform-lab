@@ -4,10 +4,13 @@ My hands-on lab for learning Terraform on AWS, following the ADV-IT "Terraform �
 
 ## Structure
 
-| Folder      | What it does                                                                                                                                                                    |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Lesson-1/` | Creates EC2 instances (Ubuntu and Amazon Linux) in `eu-north-1`. Covers `init → plan → apply → destroy`, `count`, tags, in-place updates and drift.                             |
+| Folder | What it does |
+|---|---|
+| `Lesson-1/` | Creates EC2 instances (Ubuntu and Amazon Linux) in `eu-north-1`. Covers `init → plan → apply → destroy`, `count`, tags, in-place updates and drift. |
 | `Lesson-2/` | A simple web server: an Ubuntu EC2 instance with nginx installed via `user_data`, and a security group that opens only port 80 (HTTP). Verified with `curl http://<public_ip>`. |
+| `Lesson-3/` | The bootstrap script moved out of the `.tf` code into an external file. |
+| `Lesson-4/` | `templatefile()`: the web page is rendered from a template with variables and a `for` loop; the output is checked in `terraform console` before deploying. |
+| `Lesson-6/` | Lifecycle rules (`create_before_destroy`, `prevent_destroy`, `ignore_changes`) and an Elastic IP, so the web server can be replaced while keeping the same address. |
 
 ## Prerequisites
 
